@@ -1,10 +1,10 @@
 {
-    "name": "react-utilites",
+    "name": "react-utility",
     "version": "0.0.0",
     "description": "Helpers used in react projects",
-    "main": "index.js",
+    "main": "build/index.js",
     "scripts": {
-      "build": "babel index.jsx -s inline --compact true -o index.js --minified",
+      "build": "babel --source-maps inline src --out-dir build --minified --compact true --retain-lines",
       "prepublish": "npm run build"
     },
     "repository": {
@@ -12,7 +12,7 @@
       "url": "https://github.com/akanaimath/react-utility.git"
     },
     "files": [
-      "index.js"
+      "build/"
     ],
     "keywords": [
       "react",
