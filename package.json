@@ -1,0 +1,39 @@
+{
+    "name": "react-utilites",
+    "version": "0.0.0",
+    "description": "Helpers used in react projects",
+    "main": "index.js",
+    "scripts": {
+      "build": "babel index.jsx -s inline --compact true -o index.js --minified",
+      "prepublish": "npm run build"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/akanaimath/react-utility.git"
+    },
+    "files": [
+      "index.js"
+    ],
+    "keywords": [
+      "react",
+      "data",
+      "array"
+    ],
+    "author": "Naimath",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/akanaimath/react-utility/issues"
+    },
+    "homepage": "https://github.com/akanaimath/react-utility#readme",
+    "dependencies": {
+      "react": "16.x"
+    },
+    "devDependencies": {
+      "babel-cli": "^6.26.0",
+      "babel-preset-env": "1.x",
+      "babel-register": "6.x",
+      "mocha": "4.x",
+      "unit.js": "2.x"
+    }
+  }
+  
