@@ -9,8 +9,7 @@ RPM_NAME
 .project
 yarn.lock
 yarn-error.log
-public/site.js
+build/*
 .includepath
 .settings/*
-index.js
 node_modules/*
