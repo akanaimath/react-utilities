@@ -1,9 +1,9 @@
 'use strict';
-import { cloneObject, mergeObjects, objectsDiffer, cloneProps, excludeList, isObjectsEqual } from "./objectsFunc.jsx";
-import { minMaxValInArr, sumArray, average, precise, precentage, arraySort, sortArrOfObj, isArraysEqual } from "./arrayFunc.jsx";
-import { stringWHSize, strReplaceParams } from "./stringFunc.jsx";
-import { lightenDarkenColor } from "./cssFunc.jsx";
-import { dateFormat, minutesConvertToDayHrMin } from './timeFunc.jsx';
+import { cloneObject, mergeObjects, objectsDiffer, cloneProps, excludeList, isObjectsEqual } from "./objectsFunc.js";
+import { minMaxValInArr, sumArray, average, precise, precentage, arraySort, sortArrOfObj, isArraysEqual } from "./arrayFunc.js";
+import { stringWHSize, strReplaceParams } from "./stringFunc.js";
+import { lightenDarkenColor } from "./cssFunc.js";
+import { dateFormat, minutesConvertToDayHrMin } from './timeFunc.js';
 
 module.export = {
     cloneObject,
