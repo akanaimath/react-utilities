@@ -1,5 +1,5 @@
 'use strict';
-import { isObjectsEqual } from "./objectsFunc.jsx";
+import { isObjectsEqual } from "../build/objectsFunc.js";
 /**
  * Get the minimum/maximum value in array of strings or objects or numbers
  * @param {*} arr array of objects or strings or numbers 
