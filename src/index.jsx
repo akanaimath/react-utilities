@@ -5,7 +5,7 @@ import { stringWHSize, strReplaceParams } from "./stringFunc.js";
 import { lightenDarkenColor } from "./cssFunc.js";
 import { dateFormat, minutesConvertToDayHrMin } from './timeFunc.js';
 
-export default {
+export {
     cloneObject,
     mergeObjects,
     objectsDiffer,
