@@ -5,7 +5,7 @@
  * @param {any} data
  * @param {any} target
  */
-function copyTo(data, target) {
+export const copyTo = (data, target) => {
     for (let key in data) {
         const type = typeof (data[key]);
         if (type == 'object') {
@@ -21,7 +21,7 @@ function copyTo(data, target) {
  * @param {any} data
  * Note, only the following types are copied: primitives, Object and Array
  */
-function cloneObject(data) {
+export const cloneObject = (data) => {
     if (typeof (data) == 'undefined' || data == null) {
         return null;
     } else if (typeof data != 'object') {
@@ -66,7 +66,7 @@ function cloneObject(data) {
  *      e: [0,0,0]
  *    };
  */
-function mergeObjects(srcObj, dstObj) {
+export const mergeObjects = (srcObj, dstObj) => {
 
     let src = srcObj;
     let dst = dstObj;
@@ -129,7 +129,7 @@ function mergeObjects(srcObj, dstObj) {
  * @param {Object} props
  * @param {Array} ignore
  */
-function cloneProps(props, ignore = ['root']) {
+export const cloneProps = (props, ignore = ['root']) => {
     const target = {};
 
     const ign = {};
@@ -156,7 +156,7 @@ function cloneProps(props, ignore = ['root']) {
  * 
  * Returns true if the 2 objects differ
  */
-function objectsDiffer(srcObj, dstObj) {
+export const objectsDiffer = (srcObj, dstObj) => {
 
     const que = [[srcObj, dstObj]];
     let src, dst;
@@ -217,7 +217,7 @@ function objectsDiffer(srcObj, dstObj) {
  * 
  * returns a new list that excludes b from a
  */
-function excludeList(a, b) {
+export const excludeList = (a, b) => {
     const result = [];
     for (let id in a) {
         const value = a[id];
@@ -232,7 +232,7 @@ function excludeList(a, b) {
 * @param {*} obj1 
 * @param {*} obj2 
 */
-const isObjectsEqual = (obj1, obj2) => {
+export const isObjectsEqual = (obj1, obj2) => {
     let flag = false;
     if (typeof obj1 == typeof obj2 && typeof obj1 == "object" && !Array.isArray(obj1) && !Array.isArray(obj2)) {
         const arrayProperty1 = Object.getOwnPropertyNames(obj1);
@@ -263,11 +263,11 @@ const isObjectsEqual = (obj1, obj2) => {
     return flag;
 }
 
-export {
-    cloneObject,
-    mergeObjects,
-    objectsDiffer,
-    cloneProps,
-    excludeList,
-    isObjectsEqual,
-};
+// export {
+//     cloneObject,
+//     mergeObjects,
+//     objectsDiffer,
+//     cloneProps,
+//     excludeList,
+//     isObjectsEqual,
+// };
