@@ -13,3 +13,4 @@ build/*
 .includepath
 .settings/*
 node_modules/*
+package-lock.json
