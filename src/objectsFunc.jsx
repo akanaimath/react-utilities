@@ -263,7 +263,7 @@ const isObjectsEqual = (obj1, obj2) => {
     return flag;
 }
 
-module.exports = {
+export default {
     cloneObject,
     mergeObjects,
     objectsDiffer,
