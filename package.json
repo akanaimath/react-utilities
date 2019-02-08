@@ -2,7 +2,7 @@
   "name": "react-utility",
   "version": "1.0.8",
   "description": "Helpers used in react projects",
-  "main": "build/index.js",
+  "main": "build/index",
   "scripts": {
     "build": "babel --source-maps inline src --out-dir build --minified --compact true --retain-lines",
     "prepublish": "npm run build"
