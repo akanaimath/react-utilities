@@ -211,7 +211,7 @@ const isArraysEqual = (arr1, arr2) => {
     return flag;
 }
 
-export default {
+module.export = {
     minMaxValInArr,
     sumArray,
     average,

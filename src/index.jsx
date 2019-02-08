@@ -4,7 +4,6 @@ import { minMaxValInArr, sumArray, average, precise, precentage, arraySort, sort
 import { stringWHSize, strReplaceParams } from "./stringFunc.js";
 import { lightenDarkenColor } from "./cssFunc.js";
 import { dateFormat, minutesConvertToDayHrMin } from './timeFunc.js';
-console.log("welcome");
 
 export {
     cloneObject,
