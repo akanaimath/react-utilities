@@ -67,6 +67,11 @@ const minutesConvertToDayHrMin = (minutes) => {
     const hours = Math.floor(input / 60 % 24);
     const days = Math.floor(input / (60 * 24));
     const min = Math.floor(input % 60);
+    const obj = {
+        hours: hours,
+        days: days,
+        minutes: min,
+    };
     let str = "";
     if (days > 0 && hours > 0 && min > 0) {
         str = `${days}d ${hours}hr ${min}min`;
@@ -82,10 +87,12 @@ const minutesConvertToDayHrMin = (minutes) => {
         str = `${min}min`
     }
 
-    return (str + " " + msg);
+    obj.string = (str + " " + msg);
+
+    return obj;
 }
 
-module.export ={
+module.export = {
     dateFormat,
     minutesConvertToDayHrMin
 }

@@ -5,7 +5,7 @@ import { isObjectsEqual } from "../build/objectsFunc.js";
  * @param {*} arr array of objects or strings or numbers 
  * @param {*} key used when array of objects 
  */
-function minMaxValInArr(arr = [], key = "", getmin = true) {
+function minMaxValInArr(arr = [], getmin = true, key = "") {
     let list = [];
     if (typeof arr == "object" && Array.isArray(arr)) {
         if (arr.length == 0) {
@@ -23,8 +23,13 @@ function minMaxValInArr(arr = [], key = "", getmin = true) {
             })
             return getmin ? Math.min(...list) : Math.max(...list);
         }
-        else if (typeof arr[0] == "object" && !Array.isArray(arr[0]) && key) {
-            list = arr.map(obj => obj[key]);
+        else if (typeof arr[0] == "object" && !Array.isArray(arr[0]) && key.length > 0) {
+            arr.map((obj) => {
+                if (obj.hasOwnProperty(key)) {
+                    list.push(obj[key]);
+                }
+            });
+
             return getmin ? Math.min(...list) : Math.max(...list);
         }
         return 0;
@@ -57,7 +62,7 @@ function sumArray(arr = [], key = "") {
 
             return list.reduce((a, b) => a + b, 0);
         }
-        else if (typeof arr[0] == "object" && !Array.isArray(arr[0]) && key) {
+        else if (typeof arr[0] == "object" && !Array.isArray(arr[0]) && key.length > 0) {
             arr.map((obj) => {
                 if (obj.hasOwnProperty(key)) {
                     list.push(+obj[key]);
@@ -78,7 +83,7 @@ function sumArray(arr = [], key = "") {
  * 
  * calculate the average of number in array of objects using key to a any precision.
  */
-function average(arr = [], key = "", precision = 2) {
+function averageArray(arr = [], key = "", precision = 2) {
     let list = [], Sum = 0;
     if (typeof arr == "object" && Array.isArray(arr)) {
         if (arr.length == 0) {
@@ -159,11 +164,11 @@ function sortArrOfObj(arr = [], key = "", order = "asc") {
     if (!Array.isArray(arr)) {
         return "Not an array";
     }
-    else if (!arr.length) {
-        return sortedArr;
+    else if (arr.length == 0) {
+        return [];
     }
     else {
-        sortedArr.sort(arraySort(order, key));
+        sortedArr.sort(arraySort(key, order));
         return sortedArr;
     }
 }
@@ -214,10 +219,9 @@ const isArraysEqual = (arr1, arr2) => {
 module.export = {
     minMaxValInArr,
     sumArray,
-    average,
+    averageArray,
     precise,
     precentage,
-    arraySort,
     sortArrOfObj,
     isArraysEqual
 };
