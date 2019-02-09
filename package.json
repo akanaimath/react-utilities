@@ -1,6 +1,6 @@
 {
   "name": "react-utility",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Helpers used in react projects",
   "main": "build/index",
   "scripts": {
